@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant Garamond"/>
-    <link href="./reset.css" rel="stylesheet"/>
-    <link href="./styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant Garamond" />
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -18,16 +20,55 @@
         </header>
 
         <main>
-            <h1>POP QUIZ</h1>
-            <p>
-                This is a quiz about the basic knowledge of front-end programming.<br/>
-                Press the button to start your quiz 
-            </p>
-            <button class="btn-start">Start</button>
+            <div class="intro">
+                <h1>POP QUIZ</h1>
+                <p>
+                    This is a quiz about the basic knowledge of front-end programming.<br />
+                    Press the button to start your quiz
+                </p>
+                <button class="btn-start">Start</button>
+            </div>
+
+            <section class="question_1">
+                <P>Which one is not primitive js type?</P>
+                <button class="btn_1">Boolean</button>
+                <button class="btn_1">Object</button>
+                <button class="btn_1">String</button>
+                <button class="btn_1">Number</button>
+            </section>
+            <section class="question_2">
+                <P>In JavaScript, functions attached to objects are called:</P>
+                <button class="btn_2">Method</button class="btn_2">
+                <button class="btn_2">Object</button>
+                <button class="btn_2">String</button>
+                <button class="btn_2">Boolean</button>
+            </section>
+            <section class="question_3">
+                <P>In the browser, the global execution context is:</P>
+                <button class="btn_3">Window</button>
+                <button class="btn_3">Object</button>
+                <button class="btn_3">Function</button>
+                <button class="btn_3">This</button>
+            </section>
+            <section class="question_4">
+                <P>Which attribute must have a unique value each time it is used in an HTML document?</P>
+                <button class="btn_4">Margin</button>
+                <button class="btn_4">Height</button>
+                <button class="btn_4">Border</button>
+                <button class="btn_4">Padding</button>
+            </section>
+            <section class="question_5">
+                <P>Which choice is not part of CSS box model:</P>
+                <button class="btn_5">Title</button>
+                <button class="btn_5">Class</button>
+                <button class="btn_5">Style</button>
+                <button class="btn_5">Id</button>
+            </section>
+
         </main>
-        
-        <!-- <footer>Made with Julie</footer> -->
+
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
