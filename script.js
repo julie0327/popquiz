@@ -1,20 +1,49 @@
 let btn_start = document.querySelector(".btn-start");
 let intro = document.querySelector(".intro");
 let container = document.querySelector(".container");
+let main = document.querySelector("main");
 let question_1 = document.querySelector(".question_1");
 let question_2 = document.querySelector(".question_2");
 let question_3 = document.querySelector(".question_3");
 let question_4 = document.querySelector(".question_4");
 let question_5 = document.querySelector(".question_5");
+let result = document.querySelector(".result");
 let btn_1 = document.querySelectorAll(".btn_1");
 let btn_2 = document.querySelectorAll(".btn_2");
 let btn_3 = document.querySelectorAll(".btn_3");
 let btn_4 = document.querySelectorAll(".btn_4");
 let btn_5 = document.querySelectorAll(".btn_5");
-let correctAnswer = document.createElement("span");
+let btn_1_correct = document.getElementById("btn_1_correct");
+let btn_2_correct = document.getElementById("btn_2_correct");
+let btn_3_correct = document.getElementById("btn_3_correct");
+let btn_4_correct = document.getElementById("btn_4_correct");
+let btn_5_correct = document.getElementById("btn_5_correct");
+let score = 0;
+function checkAnswer(btn, num) {
+  function correctAnswer() {
+    let correctAnswer = document.createElement("span");
+    main.appendChild(correctAnswer).textContent = "Correct!";
+    setTimeout(function () {
+      correctAnswer.setAttribute("style", "display:none");
+    }, 1000);
+  }
+  function incorrectAnswer() {
+    let correctAnswer = document.createElement("span");
+    main.appendChild(correctAnswer).textContent = "Wrong!";
+    setTimeout(function () {
+      correctAnswer.setAttribute("style", "display:none");
+    }, 1000);
+  }
+  if (btn.matches(`#btn_${num}_correct`)) {
+    score++;
+    console.log(score);
+    return correctAnswer();
+  } else {
+    return incorrectAnswer();
+  }
+}
 
 btn_start.addEventListener("click", function () {
-  console.log("!!!!!");
   intro.setAttribute("style", "display:none");
   question_1.setAttribute(
     "style",
@@ -24,49 +53,57 @@ btn_start.addEventListener("click", function () {
 
 for (let i = 0; i < btn_1.length; i++) {
   btn_1[i].addEventListener("click", function () {
-    console.log("@@@@@@");
     question_1.setAttribute("style", "display:none");
     question_2.setAttribute(
       "style",
       "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
     );
-    // intro.appendChild(correctAnswer).textContent = "Correct";
+    checkAnswer(btn_1[i], 1);
   });
 }
 
 for (let i = 0; i < btn_2.length; i++) {
   btn_2[i].addEventListener("click", function () {
-    console.log("@@@@@@");
     question_2.setAttribute("style", "display:none");
     question_3.setAttribute(
       "style",
       "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
     );
-    // intro.appendChild(correctAnswer).textContent = "Correct";
+    checkAnswer(btn_2[i], 2);
   });
 }
 
 for (let i = 0; i < btn_3.length; i++) {
   btn_3[i].addEventListener("click", function () {
-    console.log("@@@@@@");
     question_3.setAttribute("style", "display:none");
     question_4.setAttribute(
       "style",
       "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
     );
-    // intro.appendChild(correctAnswer).textContent = "Correct";
+    checkAnswer(btn_3[i], 3);
   });
 }
 
 for (let i = 0; i < btn_4.length; i++) {
   btn_4[i].addEventListener("click", function () {
-    console.log("@@@@@@");
     question_4.setAttribute("style", "display:none");
     question_5.setAttribute(
       "style",
       "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
     );
-    // intro.appendChild(correctAnswer).textContent = "Correct";
+    checkAnswer(btn_4[i], 4);
+  });
+}
+
+for (let i = 0; i < btn_5.length; i++) {
+  btn_5[i].addEventListener("click", function () {
+    question_5.setAttribute("style", "display:none");
+    result.setAttribute(
+      "style",
+      "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
+    );
+    checkAnswer(btn_5[i], 5);
+    main.appendChild(result).text = `Your score is ${score}`;
   });
 }
 // let question_1 = document.createElement('div');
