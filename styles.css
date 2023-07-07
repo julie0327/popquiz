@@ -65,3 +65,15 @@ button{
 section{
     display:none;
 }
+
+.yourName input{
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+    border-color:#9254de;
+    border-radius: 5px;
+}
+.yourName input:focus{
+    outline-color:#722ed1;
+    border-radius: 5px;
+}

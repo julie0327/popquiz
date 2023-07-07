@@ -7,7 +7,7 @@ let question_2 = document.querySelector(".question_2");
 let question_3 = document.querySelector(".question_3");
 let question_4 = document.querySelector(".question_4");
 let question_5 = document.querySelector(".question_5");
-let result = document.querySelector(".result");
+let yourName = document.querySelector(".yourName");
 let btn_1 = document.querySelectorAll(".btn_1");
 let btn_2 = document.querySelectorAll(".btn_2");
 let btn_3 = document.querySelectorAll(".btn_3");
@@ -18,6 +18,8 @@ let btn_2_correct = document.getElementById("btn_2_correct");
 let btn_3_correct = document.getElementById("btn_3_correct");
 let btn_4_correct = document.getElementById("btn_4_correct");
 let btn_5_correct = document.getElementById("btn_5_correct");
+let result = document.createElement("section");
+
 let score = 0;
 function checkAnswer(btn, num) {
   function correctAnswer() {
@@ -98,14 +100,17 @@ for (let i = 0; i < btn_4.length; i++) {
 for (let i = 0; i < btn_5.length; i++) {
   btn_5[i].addEventListener("click", function () {
     question_5.setAttribute("style", "display:none");
+
     result.setAttribute(
       "style",
       "display:flex; flex-direction: column; width:auto; height:auto; align-items:center; font-family: Cormorant Garamond;"
     );
     checkAnswer(btn_5[i], 5);
-    main.appendChild(result).text = `Your score is ${score}`;
+    main.appendChild(result).textContent = `Your score is ${score}`;
+    yourName.setAttribute("style", "display:flex");
   });
 }
+
 // let question_1 = document.createElement('div');
 // let question_2 = document.createElement('div');
 // let question_3 = document.createElement('div');
