@@ -77,3 +77,22 @@ section{
     outline-color:#722ed1;
     border-radius: 5px;
 }
+/* .yourName{
+    display: flex;
+} */
+.btn_submit{
+    display:flex;
+    width: 80px;
+    height: 30px;
+    justify-content: center;
+}
+.yourName button{
+margin-top: 0px;
+}
+.yourName button:active{
+    outline-color:#722ed1;
+    border-radius: 5px;
+    color: #722ed1;
+    background-color: #f9f0ff;
+}
+
