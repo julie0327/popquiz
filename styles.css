@@ -80,6 +80,11 @@ section{
 /* .yourName{
     display: flex;
 } */
+.yourName h2{
+    margin-top: 0px;
+    margin-right:20px;
+
+}
 .btn_submit{
     display:flex;
     width: 80px;

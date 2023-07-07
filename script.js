@@ -13,6 +13,7 @@ let btn_2 = document.querySelectorAll(".btn_2");
 let btn_3 = document.querySelectorAll(".btn_3");
 let btn_4 = document.querySelectorAll(".btn_4");
 let btn_5 = document.querySelectorAll(".btn_5");
+let btn_submit = document.querySelector(".btn_submit");
 let btn_1_correct = document.getElementById("btn_1_correct");
 let btn_2_correct = document.getElementById("btn_2_correct");
 let btn_3_correct = document.getElementById("btn_3_correct");
@@ -27,14 +28,14 @@ function checkAnswer(btn, num) {
     main.appendChild(correctAnswer).textContent = "Correct!";
     setTimeout(function () {
       correctAnswer.setAttribute("style", "display:none");
-    }, 1000);
+    }, 700);
   }
   function incorrectAnswer() {
     let correctAnswer = document.createElement("span");
     main.appendChild(correctAnswer).textContent = "Wrong!";
     setTimeout(function () {
       correctAnswer.setAttribute("style", "display:none");
-    }, 1000);
+    }, 700);
   }
   if (btn.matches(`#btn_${num}_correct`)) {
     score++;
@@ -110,6 +111,7 @@ for (let i = 0; i < btn_5.length; i++) {
     yourName.setAttribute("style", "display:flex");
   });
 }
+// btn_submit.addEventListener("click", function () {});
 
 // let question_1 = document.createElement('div');
 // let question_2 = document.createElement('div');
