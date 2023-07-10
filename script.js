@@ -22,7 +22,7 @@ let btn_3_correct = document.getElementById("btn_3_correct");
 let btn_4_correct = document.getElementById("btn_4_correct");
 let btn_5_correct = document.getElementById("btn_5_correct");
 let result = document.createElement("section");
-
+let score = 0;
 function checkAnswer(btn, num) {
   function correctAnswer() {
     let correctAnswer = document.createElement("span");
@@ -38,7 +38,7 @@ function checkAnswer(btn, num) {
       correctAnswer.setAttribute("style", "display:none");
     }, 700);
   }
-  let score = 0;
+
   if (btn.matches(`#btn_${num}_correct`)) {
     score++;
     console.log(score);
