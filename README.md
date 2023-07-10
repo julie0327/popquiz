@@ -7,7 +7,7 @@
 * If you answer a question incorrectly, time is subtracted from the clock
 * All questions are answered or the timer reaches 0, the game is over
 * When the game is over,you can save my initials and my score
-**Depolyment
+## Depolyment
 https://julie0327.github.io/popquiz/
 ---------
-
+![](https://github.com/julie0327/popquiz/blob/main/Capture.JPG)
