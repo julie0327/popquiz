@@ -20,6 +20,9 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+header a{
+    text-decoration: none;
+}
 /* layout of the main part */
 main{
     margin: 50px;
@@ -62,6 +65,12 @@ background-color: #f9f0ff;
 button{
     width:90px;height:40px; border:none; color:#f9f0ff; border-radius: 5px; background-color:#722ed1; font-size: 25px; margin:15px;box-shadow: 0px 0px 2px 2px #9254de;
 }
+button:active{
+     outline-color:#722ed1;
+    border-radius: 5px;
+    color: #722ed1;
+    background-color: #f9f0ff;
+}
 section{
     display:none;
 }
@@ -100,4 +109,28 @@ margin-top: 0px;
     color: #722ed1;
     background-color: #f9f0ff;
 }
-
+/* layout of highscore page */
+.highscore{
+    display: flex;
+    justify-content: center;
+}
+.clear{
+    width:120px
+}
+.clear:active{
+    width: 120px;
+    outline-color:#722ed1;
+    border-radius: 5px;
+    color: #722ed1;
+    background-color: #f9f0ff;
+}
+.highscore_list{
+    display:flex;
+    justify-content: center;
+}
+.goback:active{
+    outline-color:#722ed1;
+    border-radius: 5px;
+    color: #722ed1;
+    background-color: #f9f0ff;
+}

@@ -8,6 +8,7 @@ let question_3 = document.querySelector(".question_3");
 let question_4 = document.querySelector(".question_4");
 let question_5 = document.querySelector(".question_5");
 let yourName = document.querySelector(".yourName");
+let initalName=document.querySelector('.initialName')
 let btn_1 = document.querySelectorAll(".btn_1");
 let btn_2 = document.querySelectorAll(".btn_2");
 let btn_3 = document.querySelectorAll(".btn_3");
@@ -109,9 +110,20 @@ for (let i = 0; i < btn_5.length; i++) {
     checkAnswer(btn_5[i], 5);
     main.appendChild(result).textContent = `Your score is ${score}`;
     yourName.setAttribute("style", "display:flex");
+
   });
 }
-// btn_submit.addEventListener("click", function () {});
+btn_submit.addEventListener("click", function (event) {
+  event.preventDefault()
+  var highScore = {
+    initialName: initalName.value,
+    score: score
+  }
+  localStorage.setItem('highScore',JSON.stringify(highScore))
+  window.location.assign('highscore.html')
+  
+  
+});
 
 // let question_1 = document.createElement('div');
 // let question_2 = document.createElement('div');
