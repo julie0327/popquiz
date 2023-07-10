@@ -94,6 +94,7 @@ section{
     margin-right:20px;
 
 }
+
 .btn_submit{
     display:flex;
     width: 80px;
@@ -109,6 +110,7 @@ margin-top: 0px;
     color: #722ed1;
     background-color: #f9f0ff;
 }
+
 /* layout of highscore page */
 .highscore{
     display: flex;
@@ -124,7 +126,7 @@ margin-top: 0px;
     color: #722ed1;
     background-color: #f9f0ff;
 }
-.highscore_list{
+ul{
     display:flex;
     justify-content: center;
 }
