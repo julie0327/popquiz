@@ -55,6 +55,7 @@ function count_down() {
   start_countdown = setInterval(function () {
     num--;
     if (num === 0) {
+      localStorage.setItem("score", score);
       window.location.href = "./gameover.html";
     }
     countdonw_time.innerText = `Time: ${num}`;
@@ -129,7 +130,7 @@ for (let i = 0; i < btn_5.length; i++) {
   });
 }
 
-// localStorage.setItem("score", score);
+
 
 btn_submit.addEventListener("click", function (event) {
   event.preventDefault();
