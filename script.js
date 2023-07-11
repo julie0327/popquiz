@@ -44,21 +44,26 @@ function checkAnswer(btn, num) {
     console.log(score);
     return correctAnswer();
   } else {
+    secondnNumber = secondnNumber - 3
+    if (secondnNumber<=0) { 
+      window.location.href='./gameover.html'
+    }
+    console.log(secondnNumber);
     return incorrectAnswer();
   }
 }
 
-let num = 10;
+let secondnNumber = 20;
 let start_countdown;
 function count_down() {
   console.log("start counting down");
   start_countdown = setInterval(function () {
-    num--;
-    if (num === 0) {
+    secondnNumber--;
+    if (secondnNumber === 0) {
       localStorage.setItem("score", score);
       window.location.href = "./gameover.html";
     }
-    countdonw_time.innerText = `Time: ${num}`;
+    countdonw_time.innerText = `Time: ${secondnNumber}`;
   }, 1000);
 }
 btn_start.addEventListener("click", function () {
