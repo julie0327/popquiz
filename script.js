@@ -125,7 +125,7 @@ for (let i = 0; i < btn_5.length; i++) {
     checkAnswer(btn_5[i], 5);
     main.appendChild(result).textContent = `Your score is ${score}`;
 
-    yourName.setAttribute("style", "display:flex");
+    yourName.setAttribute("style", "display:flex; flex-direction: column;");
     clearInterval(start_countdown);
   });
 }

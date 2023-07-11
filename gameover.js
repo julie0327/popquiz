@@ -1,10 +1,10 @@
 let btn_submit = document.querySelector(".btn_submit");
 let initialName = document.querySelector(".initialName");
 let gameover = document.querySelector(".gameover");
-let span = document.createElement("span");
+let p = document.createElement("p");
 let score = localStorage.getItem("score");
-gameover.appendChild(span).textContent = `Your score is ${score}`;
-span.setAttribute(
+gameover.appendChild(p).textContent = `Your score is ${score}`;
+p.setAttribute(
   "style",
   "display:flex; flex-direction: column; width:auto; height:auto; justify-content:center; align-items: center; font-family: Cormorant Garamond; "
 );

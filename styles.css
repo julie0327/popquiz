@@ -89,9 +89,14 @@ section{
 /* .yourName{
     display: flex;
 } */
+.yourName-main{
+    display: flex;
+}
 .yourName h2{
     margin-top: 0px;
     margin-right:20px;
+    display: flex;
+    justify-content: center;
 
 }
 
